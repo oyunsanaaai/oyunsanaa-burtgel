@@ -1,18 +1,23 @@
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-document.getElementById("submit").addEventListener("click", function () {
-  const username = document.getElementById("username").value.trim();
-  const code = document.getElementById("code").value.trim();
-  const pack = document.getElementById("package").value;
+  const name = document.getElementById('name').value;
+  const gender = document.getElementById('gender').value;
+  const birthYear = document.getElementById('birthYear').value;
+  const zodiac = document.getElementById('zodiac').value;
+  const userPackage = document.getElementById('package').value;
 
-  if (!username || !code) {
-    alert("Бүх талбарыг бөглөнө үү!");
-    return;
-  }
+  const userData = {
+    name: name,
+    gender: gender,
+    birthYear: birthYear,
+    zodiac: zodiac,
+    package: userPackage
+  };
 
-  localStorage.setItem("username", username);
-  localStorage.setItem("code_used", code);
-  localStorage.setItem("package", pack);
-  localStorage.setItem("chat_unlocked", "true");
+  console.log("🎉 Бүртгэлийн дата:", userData);
 
-  window.location.href = "/oyunsanaa-chat"; // Чат хуудас руу
+  // Дараа нь backend, localStorage, admin DB рүү дамжуулж болно
 });
+</script>
