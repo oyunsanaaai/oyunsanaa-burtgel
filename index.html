@@ -1,49 +1,74 @@
-<form id="registrationForm">
-  <label for="name">👤 Нэр:</label>
-  <input type="text" id="name" name="name" required>
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oyunsanaa – Бүртгэл</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align:center;">📋 Oyunsanaa Бүртгэлийн Форм</h2>
+    <form id="registrationForm">
+      <input type="text" id="name" placeholder="👤 Нэр" required>
 
-  <label for="gender">🚻 Хүйс:</label>
-  <select id="gender" name="gender" required>
-    <option value="">-- Сонгох --</option>
-    <option value="male">Эрэгтэй</option>
-    <option value="female">Эмэгтэй</option>
-    <option value="other">Бусад</option>
-  </select>
+      <select id="gender" required>
+        <option value="">🚻 Хүйс сонгох</option>
+        <option value="male">Эрэгтэй</option>
+        <option value="female">Эмэгтэй</option>
+        <option value="other">Бусад</option>
+      </select>
 
-  <label for="birthYear">🎂 Төрсөн жил:</label>
-  <select id="birthYear" name="birthYear" required>
-    <option value="">-- Сонгох --</option>
-    <option>1980</option>
-    <option>1985</option>
-    <option>1990</option>
-    <option>1995</option>
-    <option>2000</option>
-    <option>2005</option>
-    <option>2010</option>
-  </select>
+      <select id="birthYear" required>
+        <option value="">🎂 Төрсөн жил</option>
+        <option>1980</option>
+        <option>1985</option>
+        <option>1990</option>
+        <option>1995</option>
+        <option>2000</option>
+        <option>2005</option>
+        <option>2010</option>
+      </select>
 
-  <label for="zodiac">♈ Орд:</label>
-  <select id="zodiac" name="zodiac" required>
-    <option value="">-- Сонгох --</option>
-    <option value="aries">Хонь</option>
-    <option value="taurus">Үхэр</option>
-    <option value="gemini">Ихэр</option>
-    <option value="cancer">Мэлхий</option>
-    <option value="leo">Арслан</option>
-    <option value="virgo">Охин</option>
-    <option value="libra">Жинлүүр</option>
-    <option value="scorpio">Хилэнц</option>
-    <option value="sagittarius">Нум</option>
-    <option value="capricorn">Матар</option>
-    <option value="aquarius">Хумх</option>
-    <option value="pisces">Загас</option>
-  </select>
+      <select id="zodiac" required>
+        <option value="">♈ Орд сонгох</option>
+        <option value="aries">Хонь</option>
+        <option value="taurus">Үхэр</option>
+        <option value="gemini">Ихэр</option>
+        <option value="cancer">Мэлхий</option>
+        <option value="leo">Арслан</option>
+        <option value="virgo">Охин</option>
+        <option value="libra">Жинлүүр</option>
+        <option value="scorpio">Хилэнц</option>
+        <option value="sagittarius">Нум</option>
+        <option value="capricorn">Матар</option>
+        <option value="aquarius">Хумх</option>
+        <option value="pisces">Загас</option>
+      </select>
 
-  <label for="package">📦 Багц сонгох:</label>
-  <select id="package" name="package" required>
-    <option value="basic">Basic</option>
-    <option value="premium">Premium</option>
-  </select>
+      <select id="package" required>
+        <option value="">📦 Багц сонгох</option>
+        <option value="basic">Basic</option>
+        <option value="premium">Premium</option>
+      </select>
 
-  <button type="submit">📩 Бүртгүүлэх</button>
-</form>
+      <button type="submit">📩 Бүртгүүлэх</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const userData = {
+        name: document.getElementById('name').value,
+        gender: document.getElementById('gender').value,
+        birthYear: document.getElementById('birthYear').value,
+        zodiac: document.getElementById('zodiac').value,
+        package: document.getElementById('package').value
+      };
+      console.log("🎉 Хэрэглэгч:", userData);
+      alert("Амжилттай бүртгэгдлээ!");
+    });
+  </script>
+</body>
+</html>
