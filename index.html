@@ -1,30 +1,49 @@
+<form id="registrationForm">
+  <label for="name">👤 Нэр:</label>
+  <input type="text" id="name" name="name" required>
 
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oyunsanaa Бүртгэл</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h2>Oyunsanaa бүртгэлийн форм</h2>
-    <label>👤 Нэр:</label>
-    <input type="text" id="username" placeholder="Нэрээ бичнэ үү">
+  <label for="gender">🚻 Хүйс:</label>
+  <select id="gender" name="gender" required>
+    <option value="">-- Сонгох --</option>
+    <option value="male">Эрэгтэй</option>
+    <option value="female">Эмэгтэй</option>
+    <option value="other">Бусад</option>
+  </select>
 
-    <label>🎫 Байгууллагын код:</label>
-    <input type="text" id="code" placeholder="Жишээ: OYS-001">
+  <label for="birthYear">🎂 Төрсөн жил:</label>
+  <select id="birthYear" name="birthYear" required>
+    <option value="">-- Сонгох --</option>
+    <option>1980</option>
+    <option>1985</option>
+    <option>1990</option>
+    <option>1995</option>
+    <option>2000</option>
+    <option>2005</option>
+    <option>2010</option>
+  </select>
 
-    <label>📦 Багц:</label>
-    <select id="package">
-      <option value="basic">Энгийн</option>
-      <option value="premium">Премиум</option>
-      <option value="corporate">Байгууллага</option>
-    </select>
+  <label for="zodiac">♈ Орд:</label>
+  <select id="zodiac" name="zodiac" required>
+    <option value="">-- Сонгох --</option>
+    <option value="aries">Хонь</option>
+    <option value="taurus">Үхэр</option>
+    <option value="gemini">Ихэр</option>
+    <option value="cancer">Мэлхий</option>
+    <option value="leo">Арслан</option>
+    <option value="virgo">Охин</option>
+    <option value="libra">Жинлүүр</option>
+    <option value="scorpio">Хилэнц</option>
+    <option value="sagittarius">Нум</option>
+    <option value="capricorn">Матар</option>
+    <option value="aquarius">Хумх</option>
+    <option value="pisces">Загас</option>
+  </select>
 
-    <button id="submit">Бүртгүүлэх</button>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+  <label for="package">📦 Багц сонгох:</label>
+  <select id="package" name="package" required>
+    <option value="basic">Basic</option>
+    <option value="premium">Premium</option>
+  </select>
+
+  <button type="submit">📩 Бүртгүүлэх</button>
+</form>
