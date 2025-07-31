@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oyunsanaa – Бүртгэл</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form id="registrationForm" method="POST" action="YOUR_FORMCARRY_ENDPOINT">
+    <h2>Бүртгэлийн форм</h2>
+    <input type="text" name="name" placeholder="Нэр" required>
+    <select name="gender" required>
+      <option value="">Хүйс</option>
+      <option value="Эр">Эр</option>
+      <option value="Эм">Эм</option>
+    </select>
+    <input type="number" name="birthYear" placeholder="Төрсөн он">
+    <select name="zodiac">
+      <option value="">Орд</option>
+      <option value="Хонь">Хонь</option>
+      <option value="Үхэр">Үхэр</option>
+      <option value="Ихэр">Ихэр</option>
+      <option value="Мэлхий">Мэлхий</option>
+      <option value="Арслан">Арслан</option>
+      <option value="Охин">Охин</option>
+      <option value="Жинлүүр">Жинлүүр</option>
+      <option value="Хилэнц">Хилэнц</option>
+      <option value="Нум">Нум</option>
+      <option value="Матар">Матар</option>
+      <option value="Хумх">Хумх</option>
+      <option value="Загас">Загас</option>
+    </select>
+    <input type="text" name="phone" placeholder="Утас">
+    <input type="email" name="email" placeholder="Имэйл">
+    <select name="ageGroup">
+      <option value="">Насны ангилал</option>
+      <option value="18-25">18–25</option>
+      <option value="26-35">26–35</option>
+      <option value="36-45">36–45</option>
+      <option value="46+">46+</option>
+    </select>
+    <input type="text" name="reward" placeholder="Урамшуулал" value="Автоматаар тооцогдоно" disabled>
+    <input type="password" name="password" placeholder="Нууц үг" required>
+    <input type="text" id="regCode" name="regCode" placeholder="Бүртгэлийн дугаар" readonly>
+    <button type="submit">Бүртгүүлэх</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
